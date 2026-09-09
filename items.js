@@ -26,13 +26,13 @@ const ITEMS = [
     tags: ["Bedrock", "v1.1"],
     downloadUrl: "https://github.com/Whatcaniplay/Lets-play-game/releases/download/v1.1-anti-dupe/AntiDupe_Optimized_v4.0.2.mcpack"
   },
-  {
+{
     id: "pvp-kill-leaderboard",
     category: "addons",
     icon: "🏆",
     name: "PVP Kill Leaderboard",
     description: "Tracks kills and deaths with a points system, floating boards, and a stat book.",
-    tags: ["Bedrock", "v1.1"],
+    tags: ["Bedrock", "v1.0"],
     downloadUrl: "https://github.com/Whatcaniplay/Lets-play-game/releases/download/v1.1-pvp-rank-system/CHAOS.PvP.rank.system.mcaddon"
   },
   {
