@@ -17,7 +17,7 @@ const ITEMS = [
     tags: ["Bedrock", "v1.0"],
     downloadUrl: "https://github.com/Whatcaniplay/Lets-play-game/releases/download/v1.0-ban-system/CHAOSSMP_BanSystem-1.mcpack"
   },
-  {
+{
     id: "anti-dupe",
     category: "addons",
     icon: "🧩",
