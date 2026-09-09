@@ -33,7 +33,7 @@ const ITEMS = [
     name: "PVP Kill Leaderboard",
     description: "Tracks kills and deaths with a points system, floating boards, and a stat book.",
     tags: ["Bedrock", "v1.0"],
-    downloadUrl: "#"
+    downloadUrl: "https://github.com/Whatcaniplay/Lets-play-game/releases/download/v1.1-pvp-rank-system/CHAOS.PvP.rank.system.mcaddon"
   },
   {
     id: "pvp-arena",
