@@ -24,7 +24,7 @@ const ITEMS = [
     name: "Anti-Dupe",
     description: "Closes common Bedrock duplication exploits, tuned to run without extra lag.",
     tags: ["Bedrock", "v1.1"],
-    downloadUrl: "#"
+    downloadUrl: "https://github.com/Whatcaniplay/Lets-play-game/releases/download/v1.1-anti-dupe/AntiDupe_Optimized_v4.0.2.mcpack"
   },
   {
     id: "pvp-kill-leaderboard",
