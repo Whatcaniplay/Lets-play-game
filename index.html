@@ -1,0 +1,39 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="description" content="Let's Play Game - clean gaming downloads"><title>Let's Play Game</title><style>*{box-sizing:border-box}body{margin:0;background:#070707;color:#eee;font-family:Arial,sans-serif}header{position:sticky;top:0;background:#090909ee;border-bottom:1px solid #292929;padding:16px 20px;z-index:2}.nav{max-width:1050px;margin:auto;display:flex;justify-content:space-between;align-items:center}.logo{font-weight:900}.logo b{color:#ff2035}nav a{color:#aaa;text-decoration:none;margin-left:18px;font-size:14px}main{max-width:1050px;margin:auto;padding:45px 20px 70px}.hero{text-align:center;padding:35px 0 35px}.badge{display:inline-block;border:1px solid #63212a;background:#19090b;color:#ff6b76;padding:7px 12px;border-radius:99px;font-size:12px}.hero h1{font-size:clamp(42px,9vw,72px);margin:18px 0 12px}.hero h1 span{color:#ff2035}.hero p{color:#999;max-width:620px;margin:0 auto 24px;line-height:1.6}.search{max-width:650px;margin:auto;display:flex;background:#111;border:1px solid #333;border-radius:14px;padding:5px}.search input{flex:1;background:none;border:0;outline:0;color:#fff;padding:13px;font-size:15px}.search button,.download{border:0;background:#ff2035;color:#fff;font-weight:800;border-radius:10px;padding:12px 18px}.cats,.cards{display:grid;gap:14px}.cats{grid-template-columns:repeat(5,1fr);margin:10px 0 42px}.cat,.card{background:#111;border:1px solid #292929;border-radius:15px}.cat{text-align:center;padding:17px 8px;color:#ddd;cursor:pointer}.cat:hover,.card:hover{border-color:#8b2631}.cards{grid-template-columns:repeat(3,1fr)}section{margin-bottom:42px}h2{margin-bottom:7px}.sub{color:#888;font-size:13px;margin-top:0;margin-bottom:18px}.card{padding:20px;min-height:210px;display:flex;flex-direction:column}.icon{font-size:23px;background:#25090d;width:45px;height:45px;border-radius:12px;display:grid;place-items:center;margin-bottom:16px}.card h3{margin:0}.card p{color:#999;font-size:13px;line-height:1.5}.meta{margin-top:auto;margin-bottom:14px}.tag{font-size:11px;color:#aaa;border:1px solid #333;padding:5px 8px;border-radius:7px;margin-right:5px}.download{width:100%;cursor:pointer;text-decoration:none;display:block;text-align:center}.empty{color:#666;font-size:13px;padding:10px 2px}footer{text-align:center;color:#666;border-top:1px solid #222;padding:25px;font-size:12px}@media(max-width:700px){nav{display:none}.cats{grid-template-columns:repeat(2,1fr)}.cards{grid-template-columns:1fr}main{padding-top:25px}}</style></head><body><header><div class="nav"><div class="logo">LET'S <b>PLAY</b> GAME</div><nav><a href="#games">Games</a><a href="#addons">Add-ons</a><a href="#maps">Maps</a><a href="#mods">Mods</a></nav></div></header><main><div class="hero"><div class="badge">🎮 YOUR GAMING DOWNLOAD HUB</div><h1>LET'S <span>PLAY</span> GAME</h1><p>Games, add-ons, mods and maps. Clean downloads, simple navigation, and no annoying clutter.</p><div class="search"><input id="search" placeholder="Search games, mods, add-ons..." oninput="filter()"><button onclick="filter()">SEARCH</button></div></div><div class="cats"><div class="cat" onclick="scrollTo('games')">🎮<br>Games</div><div class="cat" onclick="scrollTo('addons')">🧩<br>Add-ons</div><div class="cat" onclick="scrollTo('maps')">🗺️<br>Maps</div><div class="cat" onclick="scrollTo('mods')">🛠️<br>Mods</div><div class="cat">📦<br>More</div></div><section id="games"><h2>🎮 Featured Games</h2><p class="sub">Ready for your own game when you create one.</p><div class="cards" id="cards-games"></div></section><section id="addons"><h2>🧩 Latest Add-ons</h2><p class="sub">Your Bedrock add-ons, ready to download.</p><div class="cards" id="cards-addons"></div></section><section id="maps"><h2>🗺️ Maps</h2><p class="sub">Your custom worlds and maps.</p><div class="cards" id="cards-maps"></div></section><section id="mods"><h2>🛠️ Mods</h2><p class="sub">A home for your creations.</p><div class="cards" id="cards-mods"></div></section></main><footer>© 2026 Let's Play Game • Built for gamers 🎮</footer>
+
+<script src="items.js"></script>
+<script>
+function scrollTo(id){document.getElementById(id).scrollIntoView({behavior:'smooth'})}
+
+function cardHTML(item){
+  const dl = item.downloadUrl && item.downloadUrl !== "#"
+    ? `<a class="download" href="${item.downloadUrl}" download>DOWNLOAD</a>`
+    : `<a class="download" href="#" onclick="return false" style="opacity:.55;cursor:default">COMING SOON</a>`;
+  return `<article class="card" data-key="${(item.name+" "+item.description+" "+item.tags.join(" ")).toLowerCase()}">
+    <div class="icon">${item.icon}</div>
+    <h3>${item.name}</h3>
+    <p>${item.description}</p>
+    <div class="meta">${item.tags.map(t=>`<span class="tag">${t}</span>`).join("")}</div>
+    ${dl}
+  </article>`;
+}
+
+function renderAll(){
+  ["games","addons","maps","mods"].forEach(cat=>{
+    const list = ITEMS.filter(i=>i.category===cat);
+    const el = document.getElementById("cards-"+cat);
+    el.innerHTML = list.length
+      ? list.map(cardHTML).join("")
+      : `<p class="empty">Nothing here yet — check back soon.</p>`;
+  });
+}
+
+function filter(){
+  const q = document.getElementById('search').value.toLowerCase();
+  document.querySelectorAll('.card').forEach(c=>{
+    c.style.display = (!q || c.dataset.key.includes(q)) ? 'flex' : 'none';
+  });
+}
+
+renderAll();
+</script>
+</body></html>
