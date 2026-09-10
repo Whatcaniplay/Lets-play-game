@@ -53,4 +53,13 @@ const ITEMS = [
     tags: ["v1.0"],
     downloadUrl: "#"
   }
+  {
+id: "CHAOSSMP_PvP_System",
+category: "addons",
+icon: "🆚",
+name: "CHAOSSMP PvP System",
+description: "Tracks kills and deaths with a points system, challenge player, accept and reject, tp arena for fight .",
+tags: ["Bedrock", "v1.0"],
+downloadUrl: "https://github.com/Whatcaniplay/Lets-play-game/releases/download/v1.0-chaossmp-pvp-system/CHAOSSMP_PvP_Simple.mcaddon"
+},
 ];
