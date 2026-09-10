@@ -36,12 +36,12 @@ const ITEMS = [
     downloadUrl: "https://github.com/Whatcaniplay/Lets-play-game/releases/download/v1.1-pvp-rank-system/CHAOS.PvP.rank.system.mcaddon"
   },
   {
-    id: "pvp-arena",
+    id: "Villager News Add-on",
     category: "maps",
-    icon: "⚔️",
+    icon: "🛖",
     name: "PvP Arena",
-    description: "A compact arena map built for quick, fair duels.",
-    tags: ["Map"],
+    description: "ha they can talk now yay.",
+    tags: ["Bedrock", "v1.0],
     downloadUrl: "#"
   },
   {
