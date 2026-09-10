@@ -34,14 +34,13 @@ const ITEMS = [
     description: "Tracks kills and deaths with a points system, floating boards, and a stat book.",
     tags: ["Bedrock", "v1.0"],
     downloadUrl: "https://github.com/Whatcaniplay/Lets-play-game/releases/download/v1.1-pvp-rank-system/CHAOS.PvP.rank.system.mcaddon"
-  },
-  {
-    id: "Villager News Add-on",
+  },  {
+    id: "pvp-arena",
     category: "maps",
-    icon: "🛖",
+    icon: "⚔️",
     name: "PvP Arena",
-    description: "ha they can talk now yay.",
-    tags: ["Bedrock", "v1.0],
+    description: "A compact arena map built for quick, fair duels.",
+    tags: ["Map"],
     downloadUrl: "#"
   },
   {
