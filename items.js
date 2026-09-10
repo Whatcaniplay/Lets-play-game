@@ -15,7 +15,7 @@ const ITEMS = [
   name: "Villager News",
   description: "Villagers can talk now — news show add-on by Oreville Studios.",
   tags: ["Bedrock"],
-  downloadUrl: "PASTE THE LINK HERE",
+  downloadUrl: "https://sfile.co/0ILas8CxXc2",
   external: true
 },
 {
