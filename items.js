@@ -9,14 +9,15 @@ const ITEMS = [
     downloadUrl: "#"
   },
   {
-    id: "chaossmp-ban-system",
-    category: "addons",
-    icon: "🛡️",
-    name: "CHAOSSMP Ban System",
-    description: "Adds real ban/unban commands to a vanilla Bedrock server, no plugins required.",
-    tags: ["Bedrock", "v1.0"],
-    downloadUrl: "https://github.com/Whatcaniplay/Lets-play-game/releases/download/v1.0-ban-system/CHAOSSMP_BanSystem-1.mcpack"
-  },
+  id: "villager-news",
+  category: "mods",
+  icon: "🛖",
+  name: "Villager News",
+  description: "Villagers can talk now — news show add-on by Oreville Studios.",
+  tags: ["Bedrock"],
+  downloadUrl: "PASTE THE LINK HERE",
+  external: true
+},
 {
     id: "anti-dupe",
     category: "addons",
